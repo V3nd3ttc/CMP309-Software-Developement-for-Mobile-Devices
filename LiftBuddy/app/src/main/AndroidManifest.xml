@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LiftBuddy"
+        tools:targetApi="31">
+        <activity
+            android:name=".profile.settings.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".profile.MainActivity" />
+        <activity
+            android:name=".workouts.exerciseLibrary.ExerciseLibraryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".workouts.newTemplate.NewTemplateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".workouts.WorkoutsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".workouts.newWorkout.NewWorkoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
